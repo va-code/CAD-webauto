@@ -1,20 +1,8 @@
 import './style.css';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-document.querySelector('#app').innerHTML = `
-  <h1>Getting Closer!</h1> 
-  <a href="/" onclick="route()">Home</a>
-  <a href="/Project1" onclick="route()">Project1</a>
-  <a href="/Project2" onclick="route()">Project2</a>
-  <a href="/Project3" onclick="route()">Project3</a>
-  <canvas id='my_canvas'></canvas>
-`
-
 
 // routing start stuff after this point, needs to be in front of threejs because of animation
-
-
-
 const route = (event) => {
 	event = event || window.event;
 	event.preventDefault();
@@ -22,20 +10,16 @@ const route = (event) => {
 	handleLocation();
 };
 
-const routes = {
-	404: "/gitclone-glb/Home/404.html",
-	"/": "/gitclone-glb/Home/ProjTxt.txt",
-	"/Project1": "/gitclone-glb/Project1/ProjTxt.txt",
-	"/Project2": "/gitclone-glb/Project2/ProjTxt.txt",
-	"/Project3": "/gitclone-glb/Project3/ProjTxt.txt",
-
-
-};
+const routes = await fetch("/gitclone-glb/Home/Routes.json").then((data) => data.json());
 
 const handleLocation = async () => {
 	const path = window.location.pathname;
 	const route = routes[path] || routes[404];
-	const html = await fetch(route).then((data) => data.text());
+	const html = await fetch(route+"ProjTxt.txt").then((data) => data.text());
+	//if route =="gitclone-glb/Project1/":
+	//if route =="gitclone-glb/Project1/":
+	//if route =="gitclone-glb/Project1/":
+	//for fgiconst CAD = await fetch(route+"ProjTxt.obj").then((data) => data.text());
 	document.querySelector('#swappable').innerHTML = html;
 
 };
@@ -44,8 +28,16 @@ window.onpopstate = handleLocation;
 window.route = route;
 handleLocation();
 
-
 // routing end here
+
+document.querySelector('#app').innerHTML = `
+  <a href="/" onclick="route()">Home</a>
+  <a href="/Project1" onclick="route()">Project1</a>
+  <a href="/Project2" onclick="route()">Project2</a>
+  <a href="/Project3" onclick="route()">Project3</a>
+  <h1>Getting Closer!</h1> 
+  <canvas id='my_canvas'></canvas>
+`
 
 // threejs start stuff after this point
 
@@ -54,10 +46,8 @@ renderer.setPixelRatio( window.devicePixelRatio );
 const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );
 camera.position.set(0 , 0, 200);
 camera.lookAt( 0, 0, 0 );
-
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x202124);
-
 var light = new THREE.PointLight(0xffffff,0.5);
 scene.add(light);
 light.position.y = 100;

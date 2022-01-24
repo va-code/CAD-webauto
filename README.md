@@ -15,6 +15,8 @@ Stuff to add:
 Current setup method:
 :terminal:
 ```
+$ npm install --save three
+
 $ npm isntall vite@latest
 
 $ npm init vite@latest
