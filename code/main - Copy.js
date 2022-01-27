@@ -46,6 +46,18 @@ light.position.z = 40;
 
 let mesh;
 
+let cube;
+
+const material = new THREE.MeshLambertMaterial();
+function loadtestbox() {
+	const geometry = new THREE.BoxGeometry(40,40,40);
+
+	cube = new THREE.Mesh( geometry, material );
+	scene.add( cube );
+	cube.position.x = -50;
+}; 
+//swap this function into a class so that I can interate it into the canvas
+
 const loader = new GLTFLoader();
 class glbfile {
 	constructor(filepath, Xpos, Ypos, scaling){
@@ -63,10 +75,10 @@ class glbfile {
 		});
 	};
 };
-let letter_A = new glbfile('/gitclone-glb/Project1/A.glb', -50, 0, 3 );
-let letter_B = new glbfile('/gitclone-glb/Project1/B.glb', -25, 0, 3);
-let letter_C = new glbfile('/gitclone-glb/Project1/C.glb', 0, 0, 3);
-let dragon = new glbfile('/Dragon.glb', 50, 0, 0.5 );
+let letter = new glbfile('/gitclone-glb/Project1/A.glb', 0, 0, 5 );
+let dragon = new glbfile('/Dragon.glb', 50, 0, 1 );
+//loadglb('A', '/gitclone-glb/Project1/A.glb', 0, 0, 1);
+loadtestbox();
 //testing zone, careful where you step...
 
 //testing zone, careful where you step...

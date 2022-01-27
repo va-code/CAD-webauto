@@ -46,6 +46,7 @@ light.position.z = 40;
 
 let mesh;
 
+
 const loader = new GLTFLoader();
 class glbfile {
 	constructor(filepath, Xpos, Ypos, scaling){
