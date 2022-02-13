@@ -5,7 +5,7 @@
 				"/Project2": "/gitclone-glb/Project2/ProjTxt.txt", 
 				"/Project3": "/gitclone-glb/Project3/ProjTxt.txt" },
 	"hrefs":"<a href='/' onclick='route()'>Home</a> <a href='/Project1' onclick='route()'>Project1</a> <a href='/Project2' onclick='route()'>Project2</a> <a href='/Project3' onclick='route()'>Project3</a>",
-	"title":"Getting Closer!",
+	"title":"Getting Closer!"
 	"glb":{"404": "ERROR-no-GLB-files-found-for-route ",
 			"/":"/gitclone-glb/Project1/A.glb /gitclone-glb/Project1/B.glb", 
 			"/Project1":"/gitclone-glb/Project1/A.glb /gitclone-glb/Project1/B.glb /gitclone-glb/Project1/C.glb",
