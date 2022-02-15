@@ -7,7 +7,6 @@ const route = (event) => {
 	event.preventDefault();
 	window.history.pushState({}, "", event.target.href);
 	handleLocation();
-	loadfiles();
 };  
 const routes = await fetch("/gitclone-glb/Routes.json").then((data) => data.json());
 const handleLocation = async () => {
@@ -15,6 +14,8 @@ const handleLocation = async () => {
 	const route = routes["Routes"][path] || routes["Routes"][404];
 	const html = await fetch(route).then((data) => data.text());
 	document.querySelector('#swappable').innerHTML = html;
+	
+	loadfiles();
 };
 window.onpopstate = handleLocation;
 window.route = route;
