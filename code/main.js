@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-
 // routing start stuff after this point, needs to be in front of threejs because of animation
 const route = (event) => {
 	event = event || window.event;
@@ -14,7 +13,6 @@ const handleLocation = async () => {
 	const route = routes["Routes"][path] || routes["Routes"][404];
 	const html = await fetch(route).then((data) => data.text());
 	document.querySelector('#swappable').innerHTML = html;
-	
 	loadfiles();
 };
 window.onpopstate = handleLocation;

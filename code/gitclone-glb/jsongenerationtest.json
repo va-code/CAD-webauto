@@ -1,6 +1,6 @@
 {"title":"Getting Closer!",
 "hrefs":"<a href='/' onclick='route()'>Home</a> <a href='/Project1' onclick='route()'>Project1</a> <a href='/Project2' onclick='route()'>Project2</a> <a href='/Project3' onclick='route()'>Project3</a> ",
-"Routes": {"404": "/404.html", 
+"Routes": {"404": "/gitclone-glb/Home/404.html", 
 "/Project1":"/gitclone-glb/Project1/ProjTxt.txt",
 "/Project2":"/gitclone-glb/Project2/ProjTxt.txt",
 "/Project3":"/gitclone-glb/Project3/ProjTxt.txt"},
