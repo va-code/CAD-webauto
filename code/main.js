@@ -6,7 +6,7 @@ const route = (event) => {
 	event.preventDefault();
 	window.history.pushState({}, "", event.target.href);
 	handleLocation();
-};  
+};
 const routes = await fetch("/gitclone-glb/Routes.json").then((data) => data.json());
 const handleLocation = async () => {
 	const path = window.location.pathname;

@@ -1,0 +1,14 @@
+{
+	"title":"Getting Closer!",
+	"hrefs":"<a href='/' onclick='route()'>Home</a> <a href='/Project1' onclick='route()'>Project1</a> <a href='/Project2' onclick='route()'>Project2</a> <a href='/Project3' onclick='route()'>Project3</a>",
+	"Routes": {"404": "/gitclone-glb/Home/404.html",
+				"/": "/gitclone-glb/Home/ProjTxt.txt", 
+				"/Project1": "/gitclone-glb/Project1/ProjTxt.txt", 
+				"/Project2": "/gitclone-glb/Project2/ProjTxt.txt", 
+				"/Project3": "/gitclone-glb/Project3/ProjTxt.txt" },
+	"glb":{"404": "ERROR-no-GLB-files-found-for-route ",
+			"/":"/gitclone-glb/Project1/A.glb  /gitclone-glb/Project1/B.glb", 
+			"/Project1":"/gitclone-glb/Project1/A.glb /gitclone-glb/Project1/B.glb   /gitclone-glb/Project1/C.glb",
+			"/Project2":"/gitclone-glb/Project2/D.glb /gitclone-glb/Project2/E.glb /gitclone-glb/Project2/F.glb",
+			"/Project3":"/gitclone-glb/Project3/G.glb /gitclone-glb/Project3/H.glb /gitclone-glb/Project3/I.glb" }
+}

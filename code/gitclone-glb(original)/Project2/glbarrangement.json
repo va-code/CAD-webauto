@@ -1,0 +1,37 @@
+
+{
+"glbpositonx": [{
+		"D.glb":"0",
+		"E.glb":"25",
+		"F.glb":"50",
+	}],
+"glbpositony": [{
+		"D.glb":"0",
+		"E.glb":"0",
+		"F.glb":"0",
+	}],
+"glbpositonz": [{
+		"D.glb":"0",
+		"E.glb":"0",
+		"F.glb":"0",
+	}],
+
+
+"glbscale":[{
+	"D.glb":"1",
+	"E.glb":"1",
+	"F.glb":"1",
+	}],
+
+
+"ThreeCameraPos":[{
+	"x":"25",
+	"y":"0",
+	"z":"200",
+}],
+"CameraLookPos":[{
+	"x":"25",
+	"y":"0",
+	"z":"0",
+}],
+}
